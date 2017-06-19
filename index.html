@@ -1,0 +1,69 @@
+
+<!doctype html>
+
+<html>
+  <head>
+    <link rel="stylesheet" href="lib/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="lib/script.js"></script>
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<script>
+	(adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+    <title>Nifty Lab</title>
+  </head>
+
+  <body class="center" ng-app="myApp" ng-controller="myCtrl">
+    <h3>Nifty Futures Signal </h3>
+      <table style="height: 40px;" width="700" border="1">
+<tbody>
+<tr>
+<td>Symbol</td>
+<td>Executed</td>
+<td>Stoploss</td>
+<td>New Signal</td>
+<td>LTP</td>
+<td>Last Updated</td>
+</tr>
+<tr>
+<td>NIFTY</td>
+<td>{{signal["EXECUTED"]}}</td>
+<td>{{signal["STOPLOSS"]}}</td>
+<td>{{signal['NEWSIGNAL']}}</td>
+<td>{{signal['LTP']}}</td>
+<td>{{signal['LASTCANDLETS']}}</td>
+</tr>
+<tr>
+<td>Intraday NIFTY</td>
+<td></td>
+<td></td>
+<td>Buy at {{signal['PID_MAX'] + 25}}, sell at  {{signal['PID_MIN'] - 20}} </td>
+<td></td>
+<td></td>
+
+</tr>
+</tbody>
+</table>
+<button type="button" ng-click="loadData()">Refresh</button>
+<br>
+<br>
+<br>
+<input type="checkbox" ng-model="trades"><i><b>&nbsp;Previous Trades</b></i></input>
+<br>
+<br>
+<div ng-show="trades"> 
+<iframe width="700" height="300" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRDdLjLSIX4dQyxNMrLf--Z3hqgO2fR49G7s3UxSCcCmFbZL-7pigBheyWBIKeEBtDO25cdEdVq2yGI/pubhtml?widget=true&amp;headers=false"></iframe>
+</div>
+<div>
+
+
+<!-- NiftyLab -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8373483739592587"
+     data-ad-slot="7403762711"
+     data-ad-format="auto"></ins>
+
+</div>
+  </body>
+</html>
